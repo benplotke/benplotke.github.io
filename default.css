@@ -6,10 +6,3 @@ body {
 	margin-top: 5vh;
 	margin-bottom: 5vh;
 }
-
-a:link {
-	color: lightskyblue;
-}
-a:visited {
-	color: plum;
-}
