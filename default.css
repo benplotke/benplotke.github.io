@@ -1,8 +1,11 @@
-body {
-	background-color: black;
-	color: white;
+body {	
 	margin-left: 5vw;
 	margin-right: 5vw;
 	margin-top: 5vh;
 	margin-bottom: 5vh;
+
+	background-color: black;
+
+	color: white;
+	font-family: -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", system-ui, sans-serif;
 }
