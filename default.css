@@ -2,3 +2,38 @@ body {
 	background-color: black;
 	color: white;
 }
+
+.sidebar {
+	height: 100%;
+	width: 160px;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	overflow-x: hidden;
+}
+a {
+	display: block;
+}
+
+.main {
+	margin-left: 160px;
+}
+
+.imbedded {
+	margin: 0;
+}
+
+a:link {
+	color: lightskyblue;
+}
+a:visited {
+	color: plum;
+}
+
+iframe {
+	border: none;
+}
+
+ul {
+	margin: 6px 0 6px 0;
+}
