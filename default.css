@@ -1,12 +1,131 @@
-body {	
-	margin-left: 5vw;
-	margin-right: 5vw;
-	margin-top: 5vh;
-	margin-bottom: 5vh;
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+figure {
+	margin: 0;
+}
+
+a {
+	color: #5EA3D4;
+	text-decoration: none;
+}
+
+body {
+	max-width: 800px;
+	margin: 0 auto;
+
+	background-color: #37393A;
+	color: #FFFAFF;
+
+	font-family:
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Oxygen-Sans,
+		Ubuntu,
+		Cantarell,
+		"Helvetica Neue",
+		system-ui,
+		sans-serif;
+	font-size: calc(0.13vw + 13pt);
+}
+
+body > div {
+	padding: 2rem 1rem;
+	margin: 0 0 0 1rem;
+	border-left: 1px dashed #FFFAFF;
+}
+
+body > div:first-child {
+	padding: 2rem calc(1rem + 30px + 10px);
+}
+
+.project {
+	display: grid;
+	grid-template: auto / 30px auto;
+	gap: 10px;
+	align-items: end;
+	position: relative;
+}
+
+.project:before {
+	content: '';
+	position: absolute;
+	top: 2.5em;
+	width: 13px;
+	height: 13px;
+	border: 2px solid #FFFAFF;
+	left: -7px;
 	background-color: black;
-	line-height: 1.5;
+	border-radius: 50%;
+}
 
-	color: white;
-	font-family: -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", system-ui, sans-serif;
+.age {
+  font-family:
+    SFMono-Regular,
+    Consolas,
+    Liberation Mono,
+    Menlo,
+		monospace !important;
+}
+
+.description {
+	grid-area: 2 / 2 / 3 / 3;
+}
+
+.extra {
+	grid-area: 3 / 2 / 4 / 3;
+	display: flex;
+}
+
+.images > label {
+	height: 90px;
+	width: 90px;
+	margin: 5px 10px 0 0;
+}
+
+.images img {
+	object-fit: cover;
+	object-position: top;
+	height: 90px;
+	width: 90px;
+}
+
+.images > input[type=radio]:checked + label > img {
+	position: fixed;
+	top: 1vh;
+	left: 1vw;
+	height: 98vh;
+	width: 98vw;
+	z-index: 2;
+	object-fit: scale-down;
+	object-position: center;
+	margin: 0;
+	outline: none;
+	pointer-events: none;
+}
+
+input[type=radio] {
+	display: none;
+}
+
+#no_image + label {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 1;
+	background-color: #000a;
+}
+#no_image:not(:checked) + label {
+	display: unset;
 }
