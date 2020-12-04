@@ -35,6 +35,8 @@ body {
 		system-ui,
 		sans-serif;
 	font-size: calc(0.13vw + 13pt);
+
+	line-height: 1.4;
 }
 
 body > div {
@@ -51,14 +53,14 @@ body > div:first-child {
 	display: grid;
 	grid-template: auto / 30px auto;
 	gap: 10px;
-	align-items: end;
+	align-items: baseline;
 	position: relative;
 }
 
 .project:before {
 	content: '';
 	position: absolute;
-	top: 2.5em;
+	top: calc(2em + 2px);
 	width: 13px;
 	height: 13px;
 	border: 2px solid #FFFAFF;
@@ -74,6 +76,11 @@ body > div:first-child {
     Liberation Mono,
     Menlo,
 		monospace !important;
+}
+
+.age,
+.name {
+	line-height: 20px;
 }
 
 .description {
@@ -129,4 +136,7 @@ input[type=radio] {
 }
 #no_image:not(:checked) + label {
 	display: unset;
+}
+body.freeze {
+	overflow: hidden;
 }

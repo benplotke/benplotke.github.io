@@ -12,7 +12,7 @@
 		</div>
 		<div class="project">
 			<div class="age">17</div>
-			<h2>Trebuchet</h2>
+			<h2 class="name">Trebuchet</h2>
 			<div class="description">
 				Built a 21' trebuchet from scrap in the mountains. Not having internet, I had only this book as my guide. The most helpful parts were the 2 historical drawings.
 			</div>
@@ -29,14 +29,14 @@
 		</div>
 		<div class="project">
 			<div class="age"> 22</div>
-			<h2>Tetrahedral</h2>
+			<h2 class="name">Tetrahedral</h2>
 			<div class="description">
 				Independently proved the tetrahedral angle. Learning basic cemistry at the same time I was taking precalc, I became intrigued by the tetrahedral angle. I then independently developed a proof.
 			</div>
 		</div>
 		<div class="project">
 			<div class="age"> 23</div>
-			<h2>Huffman</h2>
+			<h2 class="name">Huffman</h2>
 			<div class="description">
 				Dissatisfied with simply making a huffman coder to strings of 1s and 0s, I asked my professor if I could encode bytes to a file. With permission, I made a huffman coder that could take any file and huffman code and decode it.
 			</div>
@@ -46,14 +46,14 @@
 		</div>
 		<div class="project">
 			<div class="age"> 25</div>
-			<h2>Convergence</h2>
+			<h2 class="name">Convergence</h2>
 			<div class="description">
 				Colaborated with pure mathematician. My friend Sam asked me to do a sanity check on his math discovery. Checking the converging series to a million terms involved one million factorial.
 			</div>
 		</div>
 		<div class="project">
 			<div class="age"> 27</div>
-			<h2>Furniture</h2>
+			<h2 class="name">Furniture</h2>
 			<div class="description">
 				Having recently moved I needed new furniture. I gathered some scrap wood and used my limited tools and carpentry skills to furnish my room.
 			</div>
@@ -78,7 +78,7 @@
 		</div>
 		<div class="project">
 			<div class="age"> 30</div>
-			<h2>Intelligence</h2>
+			<h2 class="name">Intelligence</h2>
 			<div class="description">
 				Applying for jobs, one asked me to take an IQ test. To get practice, I wrote a little program to generate problems for myself.
 			</div>
@@ -88,5 +88,17 @@
 		</div>
 		<input type="radio" name="image" id="no_image" checked>
 		<label for="no_image"></label>
+		<script type="text/javascript">
+			document.getElementsByName("image").forEach(radio => {
+				radio.addEventListener('change', event => {
+					if (event.target.id === 'no_image') {
+						document.body.classList.remove('freeze');
+					}
+					else {
+						document.body.classList.add('freeze');
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
