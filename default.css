@@ -83,6 +83,7 @@ body > div:first-child {
 .extra {
 	grid-area: 3 / 2 / 4 / 3;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .images > label {
@@ -100,10 +101,10 @@ body > div:first-child {
 
 .images > input[type=radio]:checked + label > img {
 	position: fixed;
-	top: 1vh;
-	left: 1vw;
-	height: 98vh;
-	width: 98vw;
+	top: 2%;
+	left: 2%;
+	height: 96%;
+	width: 96%;
 	z-index: 2;
 	object-fit: scale-down;
 	object-position: center;
@@ -121,8 +122,8 @@ input[type=radio] {
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 100vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
 	z-index: 1;
 	background-color: #000a;
 }
