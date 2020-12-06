@@ -21,14 +21,12 @@
 				Built a 21' trebuchet from scrap in the mountains. Not having internet, I had only this <a href="https://www.amazon.com/Art-Catapult-Ballistae-Trebuchets-Artillery/dp/1556525265/">book</a> as my guide. The most helpful parts were the 2 historical drawings.
 			</div>
 			<div class="extra images">
-				<input type="radio" name="image" id="trebuchet">
-				<label for="trebuchet">
-					<img src="images/trebuchet.jpg">
-				</label>
-				<input type="radio" name="image" id="trebuchet_book">
-				<label for="trebuchet_book">
-					<img src="images/trebuchet_book.jpg">
-				</label>
+				<a href="#trebuchet">
+					<figure id="trebuchet"><img src="images/trebuchet.jpg"></figure>
+				</a>
+				<a href="#trebuchet_book">
+					<figure id="trebuchet_book"><img src="images/trebuchet_book.jpg"></figure>
+				</a>
 			</div>
 		</div>
 		<div class="project">
@@ -82,22 +80,18 @@
 				Having recently moved I needed new furniture. I gathered some scrap wood and used my limited tools and carpentry skills to furnish my room.
 			</div>
 			<div class="extra images">
-				<input type="radio" name="image" id="furniture_bed">
-				<label for="furniture_bed">
-					<img src="images/furniture_bed.jpg">
-				</label>
-				<input type="radio" name="image" id="furniture_coffee">
-				<label for="furniture_coffee">
-					<img src="images/furniture_coffee.jpg">
-				</label>
-				<input type="radio" name="image" id="furniture_stand">
-				<label for="furniture_stand">
-					<img src="images/furniture_stand.jpg">
-				</label>
-				<input type="radio" name="image" id="furniture_tools">
-				<label for="furniture_tools">
-					<img src="images/furniture_tools.jpg">
-				</label>
+				<a href="#furniture_bed">
+					<figure id="furniture_bed"><img src="images/furniture_bed.jpg"></figure>
+				</a>
+				<a href="#furniture_coffee">
+					<figure id="furniture_coffee"><img src="images/furniture_coffee.jpg"></figure>
+				</a>
+				<a href="#furniture_stand">
+					<figure id="furniture_stand"><img src="images/furniture_stand.jpg"></figure>
+				</a>
+				<a href="#furniture_tools">
+					<figure id="furniture_tools"><img src="images/furniture_tools.jpg"></figure>
+				</a>
 			</div>
 		</div>
 		<div class="project">
@@ -110,19 +104,19 @@
 				<a href="https://github.com/benplotke/iqGenerator">github</a>
 			</div>
 		</div>
-		<input type="radio" name="image" id="no_image" checked>
-		<label for="no_image"></label>
 		<script type="text/javascript">
-			document.getElementsByName("image").forEach(radio => {
-				radio.addEventListener('change', event => {
-					if (event.target.id === 'no_image') {
-						document.body.classList.remove('freeze');
+			window.addEventListener('click', event => {
+				if (window.location.hash) {
+					event.preventDefault();
+					if (window.history.length > 2) {
+						window.history.back();
 					}
 					else {
-						document.body.classList.add('freeze');
+						window.history.replaceState({}, '', '.');
+						window.history.go();
 					}
-				});
-			});
+				}
+			})
 		</script>
 	</body>
 </html>

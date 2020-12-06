@@ -93,7 +93,7 @@ body > div:first-child {
 	flex-wrap: wrap;
 }
 
-.images > label {
+.images > a {
 	height: 90px;
 	width: 90px;
 	margin: 5px 10px 0 0;
@@ -106,37 +106,31 @@ body > div:first-child {
 	width: 90px;
 }
 
-.images > input[type=radio]:checked + label > img {
+.images :target {
 	position: fixed;
 	top: 2%;
 	left: 2%;
 	height: 96%;
 	width: 96%;
-	z-index: 2;
-	object-fit: scale-down;
-	object-position: center;
+	z-index: 1;
 	margin: 0;
 	outline: none;
-	pointer-events: none;
 }
 
-input[type=radio] {
-	display: none;
+.images :target img {
+	height: 100%;
+	width: 100%;
+	object-fit: scale-down;
+	object-position: center;
 }
 
-#no_image + label {
-	display: none;
+.images :target:before {
+	content: '';
 	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
-	z-index: 1;
+	z-index: -1;
 	background-color: #000a;
-}
-#no_image:not(:checked) + label {
-	display: unset;
-}
-body.freeze {
-	overflow: hidden;
 }
