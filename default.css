@@ -45,8 +45,16 @@ body > div {
 	border-left: 1px dashed #FFFAFF;
 }
 
-body > div:first-child {
+#intro {
 	padding: 2rem calc(1rem + 30px + 10px);
+}
+
+#intro > a {
+	margin-right: 1rem;
+}
+
+#intro > h3 {
+	margin-top: 1rem;
 }
 
 .project {
