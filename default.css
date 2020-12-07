@@ -39,6 +39,10 @@ body {
 	line-height: 1.4;
 }
 
+.freeze {
+	overflow: hidden;
+}
+
 body > div {
 	padding: 2rem 1rem;
 	margin: 0 0 0 1rem;
@@ -102,6 +106,7 @@ body > div {
 }
 
 .images > a {
+	-webkit-tap-highlight-color: transparent;
 	height: 90px;
 	width: 90px;
 	margin: 5px 10px 0 0;

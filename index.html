@@ -99,15 +99,23 @@
 			</div>
 		</div>
 		<script type="text/javascript">
+			window.addEventListener('hashchange', event => {
+				if (location.hash) {
+					document.body.classList.add('freeze');
+				}
+				else {
+					document.body.classList.remove('freeze');
+				}
+			});
 			window.addEventListener('click', event => {
-				if (window.location.hash) {
+				if (location.hash) {
 					event.preventDefault();
-					if (window.history.length > 2) {
-						window.history.back();
+					if (history.length > 2) {
+						history.back();
 					}
 					else {
-						window.history.replaceState({}, '', '.');
-						window.history.go();
+						history.replaceState({}, '', '.');
+						history.go();
 					}
 				}
 			})
